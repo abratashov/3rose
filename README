@@ -1,3 +1,5 @@
+3rose - Free Rails Open Search Engine
+
 == Preconfiguration ==
 1. install all need linux packages...
 -RVM
@@ -5,9 +7,23 @@
 -Rails 3
 -Tomcat 6
 -JODConverter
+-Sphinx 0.9.9
+  "sudo gedit /usr/local/etc/sphinx.conf"
+  copy there content of the "../3rose/config/sphinx/sphinx.conf"
+  set right full path for example: 
+  "xmlpipe_command = cat /home/alex/git/3rose/uploads/xml/content_books.xml"
+  "path = /home/alex/git/3rose/sphinx/sphinx"
 
-2. create need folders:
-application.rb
+2. create need folders in application.rb:
+
+--3rose
+----3rose
+----sphinx
+----uploads
+------origin_books
+------pdf
+------txt_pages
+------xml
 
 3. start tomcat:
 sudo /etc/init.d/tomcat6 start
@@ -15,14 +31,13 @@ sudo /etc/init.d/tomcat6 start
 4. start sphinx:
 sudo /usr/local/bin/searchd
 
-5. start @libros
+5. rails s
 
-6. indexed new added books
-rake gen_sphinx_xml
-sudo gedit /usr/local/etc/sphinx.conf
-sudo kill -9 'pgrep searchd'
-sudo indexer --all
-sudo /usr/local/bin/searchd
+6. indexed all added books
+rake gen_sphinx_xml          #generate content xml
+sudo kill -9 'pgrep searchd' #stop searchd service
+sudo indexer --all           #make indexation
+sudo /usr/local/bin/searchd  #start searchd service
 
 
 == Using tools:
