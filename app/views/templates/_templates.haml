@@ -1,0 +1,84 @@
+-#%script#categ.partial{ :type => 'text/html' }
+  -#-#{{#name}}{{name}}{{/name}}
+  -#.cat
+    -#.cat_id
+      -#%p {{#id}}{{id}}{{/id}}
+    -#.cat_name
+      -#%p {{#name}}{{name}}{{/name}}
+
+%script#category{:type => 'text/html'}
+  .cat
+    .cat_id
+      %p {{#id}}{{id}}{{/id}}
+    .cat_name
+      %p {{#name}}{{name}}{{/name}}
+
+%script#option_category{:type => 'text/html'}
+  %option{:value => '{{id}}'} {{#name}}{{name}}{{/name}}
+  -#%option{:value => 'id'} {{>categ}}
+
+%script#book{:type => 'text/html'}
+  .book
+    .book_id{ :id => '{{book_id}}' }
+    .book_author_name
+      %p {{#author}}{{author}}{{/author}}&nbsp;- {{#name}}{{name}}{{/name}}
+    .book_description
+      %p {{#description}}{{description}}{{/description}}
+    %span.book_filename
+      %a{ :href => '/books/get_origin_file?book_id={{book_id}}' ,:target => '_blank' } Load
+    %span.read_book{ :id=> '{{book_id}}' }
+      -#Read
+      %a{ :href => '' } Read
+      -#%a{ :href => '/uploads/{{filename}}', :target => '_blank' } {{filename}}
+
+%script#headbook{:type => 'text/html'}
+  %h3
+    %a{:href => "#", :id => '{{book_id}}' } {{#author}}{{author}}{{/author}}&nbsp;- {{#name}}{{name}}{{/name}}
+  %div
+    %p
+      .book_id{ :id => '{{book_id}}' }
+      .book_author_name
+        %p {{#author}}{{author}}{{/author}}&nbsp;- {{#name}}{{name}}{{/name}}
+      .book_description
+        %p {{#description}}{{description}}{{/description}}
+      .headbook_content_search{ :id => 'headbook_content_search-{{book_id}}' }
+        %p
+        -#{{#pages}}{{pages}}{{/pages}}
+      %p
+        %a.book_filename{ :href => '/books/get_origin_file?book_id={{book_id}}' ,:target => '_blank' } Load
+        %a.read_book_search{ :href => '', :id=> '{{book_id}}' } Read
+
+%script#search_page{:type => 'text/html'}
+  %a.go_search_page{ :href => '', :id=> '{{book_id}}', :page => '{{page}}' } {{#page}}{{page}}{{/page}}
+  %lable &nbsp;
+
+%script#read_book{:type => 'text/html'}
+  %a{ :href => '/books/get_origin_file?book_id={{id}}' ,:target => '_blank'} Load
+  .read_book_content_search{ :id => 'read_book_content_search-{{id}}' }
+    %p
+      %lable Content search:
+      %button{ :class => 'content_button_left-{{id}}', :id => '{{id}}' } <<
+      %lable#page_counter{:class => 'content_counter-{{id}}'} 1
+      %lable &#47;
+      %lable#page_total{:class => 'content_total-{{id}}'} ?
+      %button{ :class => 'content_button_right-{{id}}', :id => '{{id}}' } >>
+  .read_book
+    %div.control
+      %p
+        %button{ :class => 'page_button_left-{{id}}', :id => '{{id}}' } <<
+        %lable#page_counter{:class => 'page_counter-{{id}}'} 1
+        %lable &#47;
+        %lable{:class => 'page_total-{{id}}'} ?
+        %button{ :class => 'page_button_right-{{id}}', :id => '{{id}}' } >>
+      #slider{:class => 'slider-{{id}}'}
+    .page{ :id=> 'page-{{id}}' }
+
+%script#sub_category{:type => 'text/html'}
+  %li.collapsable
+    .hitarea.collapsable-hitarea
+    %span.folder {{#sub_cat}}{{sub_cat}}{{/sub_cat}}
+    %ul{:id => 'folder-{{id}}'}
+
+%script#tree_book{:type => 'text/html'}
+  %li
+    %span.file{:id => '{{book_id}}'} {{#author}}{{author}}{{/author}}&nbsp;- {{#name}}{{name}}{{/name}}

@@ -1,0 +1,9 @@
+[Tue Jan 10 11:17:25.276 2012] [ 4007] accepting connections
+[Tue Jan 10 13:35:45.452 2012] [ 4007] rotating indices (seamless=1)
+[Tue Jan 10 13:35:45.492 2012] [ 4007] rotating index 'book_core': success
+[Tue Jan 10 13:35:45.524 2012] [ 4007] rotating finished
+[Tue Jan 10 13:39:55.788 2012] [ 4007] rotating indices (seamless=1)
+[Tue Jan 10 13:39:55.814 2012] [ 4007] rotating index 'book_core': success
+[Tue Jan 10 13:39:55.814 2012] [ 4007] rotating finished
+[Tue Jan 10 18:13:47.777 2012] [ 4007] caught SIGTERM, shutting down
+[Tue Jan 10 18:13:48.090 2012] [ 4007] shutdown complete

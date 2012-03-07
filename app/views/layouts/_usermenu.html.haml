@@ -1,0 +1,48 @@
+.usermenu
+  .usertabs
+    %ul
+      %li
+        %a{:href => "#usertab-books-list"} Books list
+      %li
+        %a{:href => "#usertab-books-descr"} Books description
+      %li
+        %a{:href => "#usertab-search"} Search result
+      %li
+        %a{:href => "#admintab-cat"} [A: Categories]
+      %li
+        %a{:href => "#admintab-books"} [A: Books]
+    #usertab-books-list
+      %ul#bookcatalog.filetree.treeview
+    #usertab-books-descr
+      .books_list
+    #usertab-search
+      .search_list
+        %div#search_list
+    #admintab-cat
+      .categories_add
+        Parent category
+        %span
+          %select.category_select
+        %input.category_field.text{ :type => 'text', :placeholder => 'Category name' }
+        %input.add_category_button.button{ :type => 'button', :value => 'Add category' }
+      .categories_list
+    #admintab-books
+      .books_add
+        = form_tag "/books/add", :multipart=>true do
+          = label_tag '', 'Category'
+          = select_tag 'book_category', nil, :class => 'book_category_select'
+          %p
+          = text_field_tag 'author', nil, :placeholder => 'Author'
+          %p
+          = text_field_tag 'name', nil, :placeholder => 'Book name'
+          %p
+          = text_area_tag 'description', nil, :placeholder => 'Description'
+          -#Todo
+          -#%p
+          -#= label_tag '', 'Image'
+          -#= file_field_tag 'image_file', :class => 'book_image_field'
+          %p
+          File
+          = file_field_tag 'book_file', :class => 'book_file_field'
+          %p
+          = submit_tag 'Add book'

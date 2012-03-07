@@ -1,0 +1,40 @@
+[Tue Jan 10 11:26:58.258 2012] 0.022 sec [all/2/rel 1 (0,20)] [book_core] 1974
+[Tue Jan 10 11:28:34.701 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгай
+[Tue Jan 10 11:28:42.788 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгайe
+[Tue Jan 10 11:28:52.269 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе
+[Tue Jan 10 13:31:16.911 2012] 0.043 sec [all/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 13:36:29.869 2012] 0.024 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе
+[Tue Jan 10 13:36:37.621 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгай
+[Tue Jan 10 13:37:02.285 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгай | Данное
+[Tue Jan 10 13:37:09.708 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе | Данное
+[Tue Jan 10 13:37:40.573 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе | Данное
+[Tue Jan 10 13:37:43.541 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгай | Данное
+[Tue Jan 10 13:37:50.269 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе Данное
+[Tue Jan 10 13:37:57.429 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе -Данное
+[Tue Jan 10 13:40:25.558 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе -Данное
+[Tue Jan 10 13:44:06.976 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Бодхгайе -Данное
+[Tue Jan 10 13:44:17.109 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] Бодхгай Данное
+[Tue Jan 10 13:44:43.837 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] -Данное
+[Tue Jan 10 13:44:49.316 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] Данное
+[Tue Jan 10 13:44:56.414 2012] 0.001 sec [all/2/rel 1 (0,20)] [book_core] данное
+[Tue Jan 10 13:45:01.620 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] данное
+[Tue Jan 10 13:45:04.141 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] данное
+[Tue Jan 10 13:45:09.173 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] данное  издание
+[Tue Jan 10 13:45:12.781 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] данное  изданиее
+[Tue Jan 10 13:45:18.029 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] данное изданиее
+[Tue Jan 10 13:45:19.909 2012] 0.001 sec [all/2/rel 1 (0,20)] [book_core] данное издание
+[Tue Jan 10 13:45:27.205 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] данное, издание
+[Tue Jan 10 13:45:31.245 2012] 0.000 sec [all/2/rel 0 (0,20)] [book_core] данное, изданиее
+[Tue Jan 10 13:45:52.237 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] издание представляет
+[Tue Jan 10 14:04:21.113 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] издание представляет
+[Tue Jan 10 14:04:34.129 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] издание представляет собой комментарий
+[Tue Jan 10 14:06:01.209 2012] 0.000 sec [all/2/rel 1 (0,20)] [book_core] издание представляет собой комментарий
+[Tue Jan 10 14:10:08.992 2012] 0.000 sec [bool/2/rel 0 (0,20)] [book_core] Бодхгайе -Данное
+[Tue Jan 10 14:10:26.914 2012] 0.000 sec [bool/2/rel 1 (0,20)] [book_core] Бодхгай | Данное
+[Tue Jan 10 15:19:28.652 2012] 0.005 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 15:19:31.206 2012] 0.000 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 15:19:35.732 2012] 0.000 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 15:19:38.852 2012] 0.000 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 15:19:45.314 2012] 0.000 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 15:19:47.280 2012] 0.000 sec [bool/2/rel 2 (0,20)] [book_core]
+[Tue Jan 10 17:47:57.608 2012] 0.139 sec [bool/2/rel 1 (0,20)] [book_core] Бодхгай | Данное

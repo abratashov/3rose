@@ -1,0 +1,10 @@
+.searchmenu
+  %input.search_field.textfield{ :type => 'text', :placeholder => 'Enter keyword' }
+  %form
+    %label
+      %input.search_radio.radiofield{ :name => 'search_radio', :type => 'radio', :value => 'by_name', :checked => 'true' }
+      by name
+    %label
+      %input.search_radio.radiofield{ :name => 'search_radio', :type => 'radio', :value => 'by_content'}
+      by content
+  %input.search_button.button{ :type => 'button', :value => 'Search' }
