@@ -55,11 +55,13 @@ module ProtoAlibros
 end
 
 Encoding.default_internal = Encoding.default_external = 'utf-8'
-#/home/alex/git/proto_alibros/uploads/txt_pages/
-XML_NAME = 'content_books.xml'
-DIR_ROOT = '/' + Rails.root.to_s.split('/')[1..-2].join('/') + '/'
-DIR_BOOK = DIR_ROOT + 'uploads/origin_books/'
-DIR_IMG = DIR_ROOT + 'uploads/origin_images/'
-DIR_PDF = DIR_ROOT + 'uploads/pdf/'
-DIR_TXT_PAGES  = DIR_ROOT + 'uploads/txt_pages/'
-DIR_XML  = DIR_ROOT + 'uploads/xml/' + XML_NAME
+
+XML_NAME       = 'content.xml'
+DIR_ROOT       = '/' + Rails.root.to_s.split('/')[1..-2].join('/') + '/'
+DIR_SPHINX     = DIR_ROOT + 'sphinx/'
+DIR_UPLOADS     = DIR_ROOT + 'uploads/'
+DIR_BOOK       = DIR_UPLOADS + 'origin_books/'
+DIR_IMG        = DIR_UPLOADS + 'origin_images/'
+DIR_PDF        = DIR_UPLOADS + 'pdf/'
+DIR_TXT_PAGES  = DIR_UPLOADS + 'txt_pages/'
+DIR_XML        = DIR_UPLOADS + XML_NAME

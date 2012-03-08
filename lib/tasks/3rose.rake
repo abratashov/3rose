@@ -34,34 +34,24 @@ task :gen_sphinx_xml do
   puts 'complete!'
 end
 
-desc "generate xml (content of books) for sphinx"
-task :gen_sphinx_xml2 do
-  puts "starting generating xml..."
-  #arr = [['id1', 'content1'], ['id2', 'content2']]
-  arr = []
-  books = Book.all
-  books.each do |b|
-    pages = b.pages
-    pages.times do |p|
-      filename = make_filename_of_txt_page(b.filename, p+1)
-      arr << [filename, IO.read(DIR_TXT_PAGES + filename)]
-    end
+desc "generate all need directories"
+task :gen_directories do
+  if !(Dir.exist?(DIR_SPHINX))
+    Dir.mkdir(DIR_SPHINX)
   end
-
-  builder = Nokogiri::XML::Builder.new(:encoding => 'UTF-8')
-  builder.docset {
-    builder.parent.add_namespace_definition("sphinx","")
-    builder['sphinx'].schema {
-      builder['sphinx'].field(:name => "content")
-    }
-    arr.each do |el|
-      builder['sphinx'].document(:id => el[0]) do |doc|
-        doc.content el[1]
-      end
-    end
-  }
-  f = File.new(DIR_XML, 'w+')
-  f.syswrite(builder.to_xml)
-  f.close
-  puts 'complete!'
+  if !(Dir.exist?(DIR_UPLOADS))
+    Dir.mkdir(DIR_UPLOADS)
+  end
+  if !(Dir.exist?(DIR_BOOK))
+    Dir.mkdir(DIR_BOOK)
+  end
+  if !(Dir.exist?(DIR_IMG))
+    Dir.mkdir(DIR_IMG)
+  end
+  if !(Dir.exist?(DIR_PDF))
+    Dir.mkdir(DIR_PDF)
+  end
+  if !(Dir.exist?(DIR_TXT_PAGES))
+    Dir.mkdir(DIR_TXT_PAGES)
+  end
 end
